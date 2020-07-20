@@ -12,7 +12,6 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "mailgun.js": "^2.0.1",
-    "node-watch": "^0.6.4",
-    "nodemailer": "^6.4.10"
+    "node-watch": "^0.6.4"
   }
 }
