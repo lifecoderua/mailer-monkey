@@ -2,14 +2,16 @@
   "name": "mailer-monkey",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "mailgun.js": "^2.0.1",
     "node-watch": "^0.6.4",
     "nodemailer": "^6.4.10"
   }
