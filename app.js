@@ -16,9 +16,11 @@ function initWatcher() {
   watch(process.env.SOURCE, { recursive: true }, function(evt, name) {
     const html = fs.readFileSync(name, 'utf8');
     
-    mailer.send({
+    mailer.send(process.env.SENDER_DOMAIN, {      
+      from: process.env.EMAIL_FROM,
+      to: process.env.EMAIL_RECIPIENT,
+      subject: process.env.EMAIL_SUBJECT,
       html,
-      recipient: process.env.EMAIL_RECIPIENT,
     });
   });
 }

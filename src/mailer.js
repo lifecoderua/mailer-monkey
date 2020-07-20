@@ -9,6 +9,13 @@ mailer.init = (mailerConfig) => {
   client = mailgun.client(mailerConfig);
 }
 
-mailer.send = ({html, recipient}) => {
-  console.log('To Send', html);
+mailer.send = (domain, mailParams) => {
+  console.log('Sending email...');
+
+  client.messages
+    .create(domain, mailParams)
+    .then(msg => console.log(msg)) // logs response data
+    .catch(err => console.log(err)); // logs any error
+
+  console.log('SENT!');
 }
